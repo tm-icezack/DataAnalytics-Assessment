@@ -1,13 +1,14 @@
 # DataAnalytics-Assessment
-** difficultiesencountered on Data AnalyticsAssessment1 **
 
-1) LEFT JOIN is used to join savings_savingsaccount and plans_plan to the user table, with filters applied directly in the ON clause for better performance.
+**difficultiesencountered on Data AnalyticsAssessment1**
 
-2) COUNT(DISTINCT ...) ensures we’re not double-counting savings or plans due to potential join duplicates.
+LEFT JOIN is used to join savings_savingsaccount and plans_plan to the user table, with filters applied directly in the ON clause for better performance.
 
-3) SUM(s.confirmed_amount / 100.0) converts amounts from kobo (stored as integers) to naira.
+ COUNT(DISTINCT ...) ensures we’re not double-counting savings or plans due to potential join duplicates.
 
-4) HAVING COUNT(DISTINCT s.id) > 0 AND COUNT(DISTINCT p.id) > 0 ensures only users with both savings and investments are included.
+ SUM(s.confirmed_amount / 100.0) converts amounts from kobo (stored as integers) to naira.
+
+ HAVING COUNT(DISTINCT s.id) > 0 AND COUNT(DISTINCT p.id) > 0 ensures only users with both savings and investments are included.
 
 **difficultiesencountered on Data AnalyticsAssessment2**
 
